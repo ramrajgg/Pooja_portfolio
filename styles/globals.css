@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Cinzel Decorative font */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+/* Import Garamond font */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dosis:wght@200..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+  }
+
+
+/* Font-face for Cinzel Decorative */
+@font-face {
+    font-family: 'Cinzel Decorative';
+    src: url('https://fonts.gstatic.com/s/cinzeldecorative/v17/daaLRfj4j4bpwZPqYqKDbX-tL_w.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Font-face for Garamond */
+@font-face {
+    font-family: 'Garamond';
+    src: local('Garamond'), url('/path-to-garamond-font.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Example of applying fonts with Tailwind classes */
+.cinzel-decorative-regular {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 400;
+}
+
+.cinzel-decorative-bold {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+}
+
+.cinzel-decorative-black {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 900;
+}
+
+.cormorant-garamond-light {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .cormorant-garamond-regular {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+ 
