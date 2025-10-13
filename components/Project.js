@@ -30,7 +30,7 @@ const projects = [
       "Interactive Learning",
     ],
     links: {
-      pdf: "https://docs.google.com/presentation/d/1IwUCxs9YHzv0mZHMpY83HjLofbkwvvcw/edit?usp=drive_link&ouid=102834441144403931801&rtpof=true&sd=true",
+      pdf: "https://drive.google.com/drive/folders/1KrjyqP1jp65G1bFERbzyii1x2BcanxiL",
       pdfLabel: "Coaching for Managers",
     },
   },
