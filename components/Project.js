@@ -30,8 +30,24 @@ const projects = [
       "Interactive Learning",
     ],
     links: {
-      pdf: "https://drive.google.com/drive/folders/1KrjyqP1jp65G1bFERbzyii1x2BcanxiL",
-      pdfLabel: "Coaching for Managers",
+        pdfs: [
+        {
+          url: "https://drive.google.com/drive/folders/1KrjyqP1jp65G1bFERbzyii1x2BcanxiL",
+          label: "Coaching for Managers",
+        },
+        {
+          url: "https://drive.google.com/file/d/1lrjjJJuBXzlIXdRnlDbOkWnn9022tFzg/view?usp=sharing",
+          label: "Coaching for Managers Participant Workbook",
+        },
+        {
+          url: "https://drive.google.com/file/d/1GRUyGg_3s6ZtS70xMVXPCGr-f5xqeoja/view?usp=sharing",
+          label: "Dealing With Reactions Infographic",
+        },
+        {
+          url: "https://drive.google.com/file/d/1fqePdkXkkKxLlpzHtaXjwMvH16rIhd-c/view?usp=sharing",
+          label: "Decoding Others Infographic",
+        },
+      ],
     },
   },
   {
@@ -47,8 +63,12 @@ const projects = [
       "Interactive Scenarios",
     ],
     links: {
-      pdf: "https://docs.google.com/presentation/d/17JcZnA9OcS8C3TnizsDKiaAptziuGoRF/edit",
-      pdfLabel: "Skillful Collaboration",
+       pdfs: [
+        {
+          url: "https://docs.google.com/presentation/d/17JcZnA9OcS8C3TnizsDKiaAptziuGoRF/edit",
+          label: "Skillful Collaboration",
+        },
+       ],
     },
   },
   {
@@ -153,7 +173,7 @@ const Projects = () => {
                 </div>
 
                 {/* External Links */}
-                {project.links && (
+               {project.links && (
                   <div className="mb-4 flex flex-col gap-2">
                     {project.links.video && (
                       <a
@@ -165,16 +185,21 @@ const Projects = () => {
                         ▶️ Watch Demo Video
                       </a>
                     )}
-                    {project.links.pdf && (
-                      <a
-                        href={project.links.pdf}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-stroke-green underline hover:text-tigers-eye"
-                      >
-                        📄 {project.links.pdfLabel || 'View Project PDF/PPT'}
-                      </a>
-                    )}
+                    {project.links.pdfs && project.links.pdfs.length > 0 && (
+                    <div className="flex flex-col gap-1">
+                    {project.links.pdfs.map((pdf, i) => (
+                    <a
+                    key={i}
+                    href={pdf.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-stroke-green underline hover:text-tigers-eye"
+                    >
+                    📄 {pdf.label}
+                    </a>
+                    ))}
+      </div>
+    )}
                   </div>
                 )}
 
