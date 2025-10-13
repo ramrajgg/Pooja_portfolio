@@ -45,7 +45,7 @@ export default function HeroSection() {
               <p className="text-lg sm:text-right mt-2 font-serif">Experience transforming corporate learning across industries</p>
             </div>
             <div>
-              <h2 className="font-serif text-4xl font-bold">40+ Projects</h2>
+              <h2 className="font-serif text-4xl font-bold">25+ Projects</h2>
               <p className="text-lg font-serif sm:text-right mt-2">Designed and delivered solutions in finance, healthcare & consulting</p>
             </div>
             <div>

@@ -17,7 +17,8 @@ export default function ProfileSection() {
             <p className="text-cornsilk cormorant-garamond-light text-lg md:text-2xl mb-6 leading-relaxed">
                 With over a decade in L&D, I design impactful learning journeys that engage, empower, and deliver results. From leadership development to blended learning transitions, I bring strategic thinking and creative energy to every project.
                 </p>
-                <p className="text-cornsilk cormorant-garamond-light text-lg md:text-2xl mb-6 leading-relaxed">I specialize in tools like PowerPoint, H5P, and Articulate Rise to craft memorable, learner-centered content.</p>
+                <p className="text-cornsilk cormorant-garamond-light text-lg md:text-2xl mb-6 leading-relaxed">I specialize in tools like 
+                Clipchamp, Adobe PS, PowerPoint, H5P, Vyond, Articulate 360 and Rise to craft memorable, learner-centered content.</p>
             
             
                 <Link

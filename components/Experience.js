@@ -4,7 +4,7 @@ const experiences = [
   {
     title: 'Independent Consultant',
     organization: 'Prism Consulting',
-    years: '2022 – Present',
+    years: '2022 – 2024',
     details: [
       'Developed modules on Problem Solving and Decision Making, Influencing Skills, and Creativity and Innovation for a virtual instructor-led training program for a U.S.-based consumer-goods company.',
       'Created an eLearning module for a "Decoding Others" refresher course for first-time managers at a medical billing company.',
