@@ -33,7 +33,7 @@ const projects = [
         pdfs: [
         {
           url: "https://drive.google.com/drive/folders/1KrjyqP1jp65G1bFERbzyii1x2BcanxiL",
-          label: "Coaching for Managers",
+          label: "Coaching for Managers vILT Instructor Deck",
         },
         {
           url: "https://drive.google.com/file/d/1lrjjJJuBXzlIXdRnlDbOkWnn9022tFzg/view?usp=sharing",
