@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const projects = [
   {
-    name: "Coaching for Success",
+    name: "Coaching for Success - vILT",
     description:
       `Module Brief :
       The Coaching for Managers module is part of ABC Pharmaceuticals’ Manager Development Program, designed to support high-performing first-time managers transitioning from individual contributors to people leaders. 
@@ -51,7 +51,7 @@ const projects = [
     },
   },
   {
-    name: "Skillful Collaboration",
+    name: "Skillful Collaboration - vILT",
     description:
      `Sample Description: 
       The original Skillful Collaboration module was purely theoretical and heavily text-based, presented in a simple black-and-white format. My role involved redesigning and modernizing the vILT session by integrating interactive elements such as questionnaires, real-world scenarios, self-reflection activities, and relevant videos to boost learner engagement and retention. While the complete session spans four hours, the sample showcases content from the first 60 minutes.`,
@@ -72,7 +72,7 @@ const projects = [
     },
   },
   {
-    name: "Customer Centricity",
+    name: "Customer Centricity For Customer Executives Video",
     description:
       `Challenges
       The scenario highlights key challenges that a customer-centric program must address. A delayed delivery represents a clear service failure that leaves the customer feeling upset, frustrated, and potentially ignored or undervalued. Such situations can easily escalate, leading to customer dissatisfaction and possible churn. The scenario is designed to help learners recognize these consequences and practice identifying the most appropriate and empathetic response to restore customer trust.
@@ -94,7 +94,7 @@ const projects = [
     },
   },
   {
-    name: "Secure Coding",
+    name: "Secure Coding For Coders - eLearning Module",
     description:
       `Description: 
         This self-paced eLearning module is designed for experienced software developers at a mid-sized tech company to build awareness and practical understanding of secure coding practices. The 15–20 minute course incorporates real-world coding examples, interactive scenarios, and knowledge checks. The goal is to help learners recognize security vulnerabilities, apply best practices in their code, and contribute to the development of secure software products.
@@ -113,6 +113,40 @@ The interactive scenario-based design enhanced learner engagement and comprehens
       video: "https://app.cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=73a72854-fd15-4141-b7f2-760b4519b574",
     },
   },
+  {
+    name: "Time Management",
+    description:
+     `Description: 
+        This self-paced eLearning module is created for new employees who are adapting to increased
+        expectations and managing competing priorities. The 10-minute course focuses on planning
+        and prioritization skills. Content is delivered in concise sections with clear headings, minimal
+        on-screen text, and frequent interactive elements. The design reflects adult learning
+        preferences by presenting information in manageable chunks that can be quickly understood
+        and immediately applied.
+        Tools Used:
+          -->Articulate Storyline: Designed a branching, interactive module featuring layered slides,
+          scenario-based decision-making activities, and contextual feedback to reinforce learning
+          objectives.
+          -->SCORM Packaging: Published the course in SCORM format to enable seamless
+          deployment, tracking, and reporting through an LMS or SCORM Cloud.
+          -->Multimedia Assets: Incorporated voiceovers, character-driven storytelling, and subtle
+          animations to create an engaging and immersive learning experience.
+        Outcome & Impact:
+          The interactive, scenario-based approach increased learner engagement and strengthened
+          understanding of planning and prioritization strategies. Participants demonstrated improved
+          recall and greater application of these techniques in their daily work, leading to enhanced
+          productivity and time management across teams. `,
+    image: "/images/TimeManagement.png",
+    skills: ["Articulate 360", "Canva", "Clipchamp", "Adobe Photoshop"],
+    links: {
+       pdfs: [
+        {
+          url: "https://app.cloud.scorm.com/sc/user/Course?appId=5FV0LK4E4O&amp;courseId=eLearning_ArtiulateSLdemo_PoojaGf1ea7e3d-db96-4253-9d6e-3d4b739f2cbe",
+          label: "Time Management",
+        },
+       ],
+    },
+  },
 ];
 
 const Projects = () => {
@@ -122,7 +156,7 @@ const Projects = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const displayedProjects = projects.slice(0,4);
+  const displayedProjects = projects.slice(0,5);
 
   return (
     <section id="work" className="bg-black py-16 px-8">
