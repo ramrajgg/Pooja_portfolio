@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Reveal from './Reveal';
 
 const experiences = [
   {
@@ -6,11 +7,11 @@ const experiences = [
     organization: 'Prism Consulting',
     years: '2022 – 2024',
     details: [
-      'Developed modules on Problem Solving and Decision Making, Influencing Skills, and Creativity and Innovation for a virtual instructor-led training program for a U.S.-based consumer-goods company.',
+      'Developed modules on Problem Solving, Influencing Skills, and Creativity & Innovation for a U.S.-based consumer-goods company vILT program.',
       'Created an eLearning module for a "Decoding Others" refresher course for first-time managers at a medical billing company.',
       'Designed instructional storyboards and learning content with interactive elements to boost learner engagement.',
-      'Built eLearning experiences using Articulate Storyline, Rise 360, Adobe Captivate, Adobe Suite, and Clipchamp, integrating voiceovers, assessments, and multimedia.',
-      'Produced learner-centric resources supporting virtual environments with a focus on retention and application.'
+      'Built eLearning experiences using Articulate Storyline, Rise 360, Adobe Captivate, Adobe Suite, and Clipchamp.',
+      'Produced learner-centric resources supporting virtual environments with a focus on retention and application.',
     ],
   },
   {
@@ -21,7 +22,7 @@ const experiences = [
       'Updated learning content aligned with global operational needs and evolving audience profiles.',
       'Led virtual and in-person Assessment & Development Centers for over 500 managers across India.',
       'Facilitated behavioral training workshops for leadership teams across India and global branches.',
-      'Conducted Training Needs Analysis for four business units within a major recruitment firm.'
+      'Conducted Training Needs Analysis for four business units within a major recruitment firm.',
     ],
   },
   {
@@ -33,7 +34,7 @@ const experiences = [
       'Assessed leadership styles using Team Effectiveness and Personal Style Inventory tools.',
       'Curated simulations, case studies, games, and role-plays for leadership development.',
       'Implemented psychometric assessments for team leaders and conducted POSH training for fact-finders.',
-      'Delivered over 10,000 hours of training across different experience levels.'
+      'Delivered over 10,000 hours of training across different experience levels.',
     ],
   },
   {
@@ -43,57 +44,76 @@ const experiences = [
     details: [
       'Generated recurring revenue by strengthening client relationships and ensuring consistent project delivery.',
       'Analyzed organizational data to offer strategic insights to leadership teams.',
-      'Marketed and delivered a range of soft-skills and functional-skills training across various industries.',
-      'Managed multi-phase OD projects lasting from 6 months to 2 years.'
+      'Marketed and delivered soft-skills and functional-skills training across various industries.',
+      'Managed multi-phase OD projects spanning 6 months to 2 years.',
     ],
-  }
+  },
 ];
 
-
 export default function Experience() {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index); // Toggle accordion
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="bg-cream text-black py-16 px-8">
-  <h2 className="cormorant-garamond-light text-5xl text-black mb-8">EXPERIENCE</h2>
-  <div className="space-y-4">
-    {experiences.map((experience, index) => (
-      <div
-        key={index}
-        className="border border-yellow rounded-lg overflow-hidden"
-      >
-        {/* Accordion Header */}
-        <button
-          onClick={() => toggleAccordion(index)}
-          className="w-full text-left px-6 py-4 cormorant-garamond-light text-xl font-bold flex justify-between items-center bg-cream hover:bg-yellow transition-colors"
-        >
-          <div>
-            <p className="text-2xl">{experience.title}</p>
-            <p className="text-yellow text-lg">{experience.organization}</p>
-            <p className="text-md">{experience.years}</p>
-          </div>
-          <span className="text-yellow text-2xl">
-            {activeIndex === index ? '-' : '+'}
-          </span>
-        </button>
+    <section className="bg-ink py-28 px-6">
+      <div className="max-w-7xl mx-auto">
+        <Reveal>
+          <p className="font-sans text-xs tracking-widest uppercase text-gold mb-4">Career Journey</p>
+        </Reveal>
+        <Reveal delay={80}>
+          <h2 className="font-display font-bold tracking-tightest text-white text-5xl md:text-6xl mb-14">
+            Experience
+          </h2>
+        </Reveal>
 
-        {/* Accordion Content */}
-        {activeIndex === index && (
-          <div className="px-6 py-4 cormorant-garamond-light text-lg space-y-2 bg-cream">
-            <ul className="list-disc list-inside">
-              {experience.details.map((detail, detailIndex) => (
-                <li key={detailIndex}>{detail}</li>
-              ))}
-            </ul>
-          </div>
-        )}
+        <div className="space-y-4">
+          {experiences.map((exp, index) => {
+            const isOpen = activeIndex === index;
+            return (
+              <Reveal key={index} delay={index * 80}>
+                <div
+                  className={`group rounded-2xl border transition-all duration-300 ${
+                    isOpen ? 'border-gold/50 bg-ink-800' : 'border-line bg-ink-800/40 hover:border-gold/30'
+                  }`}
+                >
+                  <button
+                    onClick={() => setActiveIndex(isOpen ? -1 : index)}
+                    className="w-full text-left px-7 py-6 flex justify-between items-center gap-6"
+                  >
+                    <div className="flex items-baseline gap-5">
+                      <span className="font-display text-sm text-gold/70 tabular-nums hidden sm:block">
+                        0{index + 1}
+                      </span>
+                      <div>
+                        <p className="font-display text-xl md:text-2xl font-semibold text-white">{exp.title}</p>
+                        <p className="font-sans text-sm text-gold mt-1">{exp.organization}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-5 flex-shrink-0">
+                      <span className="font-sans text-xs text-muted hidden md:block">{exp.years}</span>
+                      <span className={`grid place-items-center w-8 h-8 rounded-full border border-gold/40 text-gold text-lg transition-transform duration-300 ${isOpen ? 'rotate-45 bg-gold/10' : ''}`}>
+                        +
+                      </span>
+                    </div>
+                  </button>
+
+                  <div className={`grid transition-all duration-500 ease-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+                    <div className="overflow-hidden">
+                      <ul className="px-7 pb-7 sm:pl-[4.5rem] space-y-3">
+                        {exp.details.map((detail, i) => (
+                          <li key={i} className="flex gap-3 font-sans text-base text-muted leading-relaxed">
+                            <span className="text-gold mt-1.5 flex-shrink-0 text-xs">●</span>
+                            <span>{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
       </div>
-    ))}
-  </div>
-</section>
+    </section>
   );
 }

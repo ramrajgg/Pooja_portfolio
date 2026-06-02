@@ -1,269 +1,190 @@
 import { useState } from "react";
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 const projects = [
   {
-    name: "Coaching for Success - vILT",
-    description:
-      `Module Brief :
-      The Coaching for Managers module is part of ABC Pharmaceuticals’ Manager Development Program, designed to support high-performing first-time managers transitioning from individual contributors to people leaders. 
-      The target audience—experienced professionals (20+ years in the industry, 10+ within the organization)—were promoted for their exceptional performance but faced challenges shifting from task execution to team development. 
-      Their transactional feedback style led to disengagement and attrition. Applying the ADDIE framework, the program addressed this gap through a 120-minute vILT session focusing on differentiating coaching from feedback, identifying personal coaching styles, and applying structured coaching models.
-      Using scenario-based discussions, breakout activities, peer learning, and role-plays, the session fostered self-awareness and empathy.
-      A virtual instructor-led training module within a Manager Development Program, designed to help individual contributors transition into people managers.
-      Through interactive discussions, role-plays and hands-on tools, participants learn to move from transactional feedback to developmental coaching, boosting team engagement.
-      
-      Tools Used:
-      MS Office suite (Word, PPT and Excel),Canva for infographics,Clipchamp Video editing tool,Zoom to deploy training
-      
-      Outcome & Impact:
-      Post-training evaluations showed enhanced coaching behaviors, stronger team engagement, and a measurable drop in attrition. Evaluation results showed strong impact across all levels—94% of participants found the session relevant and engaging, demonstrated improved coaching vocabulary and application during role-plays, and showed increased coaching conversations with their teams within 30 days post-training. Additionally, HR reported a noticeable decline in attrition rates, though specific figures remained confidential.
-
-
-    `,
+    name: "Coaching for Success – vILT",
+    summary: "A 120-minute virtual instructor-led module helping first-time managers transition from individual contributors to people leaders.",
     image: "/images/CoachingManager.jpg",
-    skills: [
-      "vILT",
-      "Manager Development",
-      "Coaching Skills",
-      "Instructional Design",
-      "Interactive Learning",
+    skills: ["vILT", "Manager Development", "Coaching Skills", "Instructional Design", "Interactive Learning"],
+    sections: [
+      { heading: "Challenge", text: "High-performing first-time managers were promoted for their technical excellence but struggled to shift from task execution to team development. Their transactional feedback style led to disengagement and attrition." },
+      { heading: "Approach", text: "Using the ADDIE framework, the session focused on differentiating coaching from feedback, identifying personal coaching styles, and applying structured coaching models through scenario-based discussions, breakout activities, peer learning, and role-plays." },
+      { heading: "Outcome", text: "94% of participants found the session relevant and engaging. Coaches showed improved vocabulary and application in role-plays, increased coaching conversations within 30 days, and HR reported a noticeable decline in attrition rates." },
+      { heading: "Tools", text: "MS Office (Word, PPT, Excel), Canva, Clipchamp, Zoom" },
     ],
     links: {
-        pdfs: [
-        {
-          url: "https://drive.google.com/drive/folders/1KrjyqP1jp65G1bFERbzyii1x2BcanxiL",
-          label: "Coaching for Managers vILT Instructor Deck",
-        },
-        {
-          url: "https://drive.google.com/file/d/1lrjjJJuBXzlIXdRnlDbOkWnn9022tFzg/view?usp=sharing",
-          label: "Coaching for Managers Participant Workbook",
-        },
-        {
-          url: "https://drive.google.com/file/d/1GRUyGg_3s6ZtS70xMVXPCGr-f5xqeoja/view?usp=sharing",
-          label: "Dealing With Reactions Infographic",
-        },
-        {
-          url: "https://drive.google.com/file/d/1fqePdkXkkKxLlpzHtaXjwMvH16rIhd-c/view?usp=sharing",
-          label: "Decoding Others Infographic",
-        },
+      pdfs: [
+        { url: "https://drive.google.com/drive/folders/1KrjyqP1jp65G1bFERbzyii1x2BcanxiL", label: "vILT Instructor Deck" },
+        { url: "https://drive.google.com/file/d/1lrjjJJuBXzlIXdRnlDbOkWnn9022tFzg/view?usp=sharing", label: "Participant Workbook" },
+        { url: "https://drive.google.com/file/d/1GRUyGg_3s6ZtS70xMVXPCGr-f5xqeoja/view?usp=sharing", label: "Dealing With Reactions Infographic" },
+        { url: "https://drive.google.com/file/d/1fqePdkXkkKxLlpzHtaXjwMvH16rIhd-c/view?usp=sharing", label: "Decoding Others Infographic" },
       ],
     },
   },
   {
-    name: "Skillful Collaboration - vILT",
-    description:
-     `Sample Description: 
-      The original Skillful Collaboration module was purely theoretical and heavily text-based, presented in a simple black-and-white format. My role involved redesigning and modernizing the vILT session by integrating interactive elements such as questionnaires, real-world scenarios, self-reflection activities, and relevant videos to boost learner engagement and retention. While the complete session spans four hours, the sample showcases content from the first 60 minutes.`,
+    name: "Skillful Collaboration – vILT",
+    summary: "A modernized vILT session redesigned from a purely theoretical, text-heavy format into an interactive, engaging learning experience.",
     image: "/images/SkillfulCollaboration.jpg",
-    skills: [
-      "eLearning",
-      "Secure Coding",
-      "ADDIE Model",
-      "Interactive Scenarios",
+    skills: ["vILT", "Redesign", "ADDIE Model", "Interactive Scenarios"],
+    sections: [
+      { heading: "Challenge", text: "The original module was purely theoretical, heavily text-based, and presented in a simple black-and-white format with no interactivity." },
+      { heading: "Approach", text: "Redesigned the four-hour session by integrating questionnaires, real-world scenarios, self-reflection activities, and relevant videos to boost learner engagement and retention." },
     ],
     links: {
-       pdfs: [
-        {
-          url: "https://docs.google.com/presentation/d/17JcZnA9OcS8C3TnizsDKiaAptziuGoRF/edit",
-          label: "Skillful Collaboration",
-        },
-       ],
+      pdfs: [{ url: "https://docs.google.com/presentation/d/17JcZnA9OcS8C3TnizsDKiaAptziuGoRF/edit", label: "Skillful Collaboration Deck" }],
     },
   },
   {
-    name: "Customer Centricity For Customer Executives Video",
-    description:
-      `Challenges
-      The scenario highlights key challenges that a customer-centric program must address. A delayed delivery represents a clear service failure that leaves the customer feeling upset, frustrated, and potentially ignored or undervalued. Such situations can easily escalate, leading to customer dissatisfaction and possible churn. The scenario is designed to help learners recognize these consequences and practice identifying the most appropriate and empathetic response to restore customer trust.
-      Solution / Program Approach
-      To design an engaging and experiential Customer Centricity Program, Genially was used as an interactive authoring platform to simulate real-life customer service scenarios. The goal was to shift learning from theoretical understanding to practical application through immersive storytelling and decision-based learning. 
-      Tools and Features Used in Genially:
-        Templates and Interactive Layers for scenario branching
-        Trigger-based navigation to simulate decision outcomes
-        Audio and animation effects to bring conversations to life
-        Pop-ups and tooltips for microlearning moments and tips on empathy or ownership
-        Score/feedback system to reinforce correct responses and learning takeaways
-      Outcome:
-      Using Genially transformed the Customer Centricity Program from a static training module into an interactive experiential journey. Participants practiced handling difficult customer conversations in a safe, simulated environment, allowing them to internalize customer-centric values and behaviors effectively.
-`,
+    name: "Customer Centricity – Interactive eLearning",
+    summary: "An immersive, decision-based eLearning experience built in Genially to help customer service reps handle difficult conversations with empathy.",
     image: "/images/CustomerCentricity.jpg",
-    skills: ["Articulate 360", "Canva", "Clipchamp", "Adobe Photoshop"],
-     links: {
-      video: "https://view.genially.com/682988de2e2623a25c99fa16/presentation-customer-service-challenge-delayed-delivery",
-    },
+    skills: ["Genially", "Scenario-Based Learning", "Customer Service", "Interactive Design"],
+    sections: [
+      { heading: "Challenge", text: "Participants needed to practice handling difficult customer conversations (e.g., delayed deliveries) in a safe environment before applying skills on the job." },
+      { heading: "Approach", text: "Used Genially's trigger-based navigation, audio/animation effects, pop-ups, and a score/feedback system to create a branching scenario simulation." },
+      { heading: "Outcome", text: "Transformed a static training module into an interactive experiential journey, enabling participants to internalize customer-centric values and behaviors effectively." },
+    ],
+    links: { video: "https://view.genially.com/682988de2e2623a25c99fa16/presentation-customer-service-challenge-delayed-delivery" },
   },
   {
-    name: "Secure Coding For Coders - eLearning Module",
-    description:
-      `Description: 
-        This self-paced eLearning module is designed for experienced software developers at a mid-sized tech company to build awareness and practical understanding of secure coding practices. The 15–20 minute course incorporates real-world coding examples, interactive scenarios, and knowledge checks. The goal is to help learners recognize security vulnerabilities, apply best practices in their code, and contribute to the development of secure software products.
-        Task:
-        Designed and developed a Secure Coding Practices for Software Developers learning experience aimed at introducing essential secure coding principles in an engaging, relatable, and action-oriented way. The objective was to help developers recognize vulnerabilities and apply secure coding techniques in real-world scenarios.
-      Tools Used:
-       -->Articulate Storyline: Developed a branching, interactive eLearning module with layered slides, scenario-based decision points, and contextual feedback to reinforce key concepts.
-       -->SCORM Packaging: Published the module in SCORM format for seamless deployment, tracking, and reporting through a Learning Management System (LMS) or SCORM Cloud.
-       -->Multimedia Assets: Integrated voiceovers, character-based storytelling, and subtle animations to create a realistic and immersive learning experience.
-      Outcome & Impact:
-The interactive scenario-based design enhanced learner engagement and comprehension of secure coding principles. Participants demonstrated stronger recall and increased application of secure coding practices in their daily work, resulting in improved code security awareness across the development team.
-`,
+    name: "Secure Coding Practices – eLearning",
+    summary: "A 15–20 minute SCORM-compliant eLearning module for software developers covering security vulnerabilities and best practices.",
     image: "/images/SecureCoding.jpg",
-    skills: ["Articulate 360", "Canva", "Clipchamp", "Adobe Photoshop"],
-     links: {
-      video: "https://app.cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=73a72854-fd15-4141-b7f2-760b4519b574",
-    },
+    skills: ["Articulate Storyline", "SCORM", "Branching Scenarios", "Multimedia"],
+    sections: [
+      { heading: "Challenge", text: "Experienced developers needed awareness of secure coding practices without sitting through a lecture-heavy course." },
+      { heading: "Approach", text: "Built a branching interactive module with layered slides, scenario-based decision points, voiceovers, character-based storytelling, and contextual feedback using Articulate Storyline." },
+      { heading: "Outcome", text: "Improved recall and increased application of secure coding practices in daily work, resulting in improved code security awareness across the development team." },
+    ],
+    links: { video: "https://app.cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=73a72854-fd15-4141-b7f2-760b4519b574" },
   },
   {
-    name: "Time Management",
-    description:
-     `Description: 
-        This self-paced eLearning module is created for new employees who are adapting to increased
-        expectations and managing competing priorities. The 10-minute course focuses on planning
-        and prioritization skills. Content is delivered in concise sections with clear headings, minimal
-        on-screen text, and frequent interactive elements. The design reflects adult learning
-        preferences by presenting information in manageable chunks that can be quickly understood
-        and immediately applied.
-        Tools Used:
-          -->Articulate Storyline: Designed a branching, interactive module featuring layered slides,
-          scenario-based decision-making activities, and contextual feedback to reinforce learning
-          objectives.
-          -->SCORM Packaging: Published the course in SCORM format to enable seamless
-          deployment, tracking, and reporting through an LMS or SCORM Cloud.
-          -->Multimedia Assets: Incorporated voiceovers, character-driven storytelling, and subtle
-          animations to create an engaging and immersive learning experience.
-        Outcome & Impact:
-          The interactive, scenario-based approach increased learner engagement and strengthened
-          understanding of planning and prioritization strategies. Participants demonstrated improved
-          recall and greater application of these techniques in their daily work, leading to enhanced
-          productivity and time management across teams. `,
+    name: "Time Management – eLearning Module",
+    summary: "A 10-minute self-paced module for new employees on planning and prioritization, built with Articulate Storyline and SCORM-packaged.",
     image: "/images/TimeManagement.png",
-    skills: ["Articulate 360", "Canva", "Clipchamp", "Adobe Photoshop"],
+    skills: ["Articulate Storyline", "SCORM", "Adult Learning", "Scenario-Based"],
+    sections: [
+      { heading: "Approach", text: "Content is delivered in concise sections with minimal on-screen text and frequent interactive elements. Scenario-based decision activities with contextual feedback reinforce planning and prioritization objectives." },
+      { heading: "Outcome", text: "Enhanced learner engagement, improved recall, and greater application of time-management techniques in daily work — leading to increased productivity across teams." },
+    ],
     links: {
-       pdfs: [
-        {
-          url: "https://app.cloud.scorm.com/sc/user/Course?appId=5FV0LK4E4O&amp;courseId=eLearning_ArtiulateSLdemo_PoojaGf1ea7e3d-db96-4253-9d6e-3d4b739f2cbe",
-          label: "Time Management",
-        },
-       ],
+      pdfs: [{ url: "https://app.cloud.scorm.com/sc/user/Course?appId=5FV0LK4E4O&courseId=eLearning_ArtiulateSLdemo_PoojaGf1ea7e3d-db96-4253-9d6e-3d4b739f2cbe", label: "Launch Module" }],
     },
   },
 ];
 
-const Projects = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleCard = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
-  const displayedProjects = projects.slice(0,5);
+export default function Projects() {
+  const [active, setActive] = useState(null);
+  const project = active !== null ? projects[active] : null;
 
   return (
-    <section id="work" className="bg-black py-16 px-8">
-      <h2 className="cormorant-garamond-light text-5xl text-white mb-8">
-        PROJECTS
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {displayedProjects.map((project, index) => (
-          <div
-            key={index}
-            className={`relative border border-yellow rounded-lg shadow-lg p-6 bg-black ${
-              activeIndex === index ? "h-auto" : "h-54"
-            } transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:bg-dark-moss-green`}
-            onClick={() => toggleCard(index)}
-          >
-            {/* Collapsed View */}
-            {activeIndex !== index && (
-              <div>
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  width={500}
-                  height={300}
-                  className="w-full h-42 object-cover rounded-md mb-4 transition-transform duration-300 hover:scale-105"
-                  priority
-                />
-                <div>
-                  <h3 className="cormorant-garamond-regular text-2xl font-bold text-cornsilk">
-                    {project.name}
-                  </h3>
-                  <p className="text-md cormorant-garamond-light text-earth-yellow">
-                    {project.type}
-                  </p>
+    <section id="work" className="bg-ink-800 py-28 px-6">
+      <div className="max-w-7xl mx-auto">
+        <Reveal>
+          <p className="font-sans text-xs tracking-widest uppercase text-gold mb-4">Selected Work</p>
+        </Reveal>
+        <Reveal delay={80}>
+          <h2 className="font-display font-bold tracking-tightest text-white text-5xl md:text-6xl mb-14">
+            Projects
+          </h2>
+        </Reveal>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((p, index) => (
+            <Reveal key={index} delay={(index % 3) * 90}>
+              <article
+                onClick={() => setActive(index)}
+                className="group relative rounded-2xl overflow-hidden border border-line bg-ink cursor-pointer transition-all duration-300 hover:border-gold/50 hover:-translate-y-1"
+              >
+                <div className="relative h-52 overflow-hidden">
+                  <Image
+                    src={p.image}
+                    alt={p.name}
+                    width={500}
+                    height={300}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+                  <span className="absolute top-4 right-4 grid place-items-center w-9 h-9 rounded-full bg-ink/70 backdrop-blur text-gold border border-gold/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    ↗
+                  </span>
                 </div>
-              </div>
-            )}
-
-            {/* Expanded View */}
-            {activeIndex === index && (
-              <div className="mt-4">
-                <h3 className="cormorant-garamond-regular text-2xl font-bold text-cornsilk mb-2">
-                  {project.name}
-                </h3>
-
-                {/* Scrollable Description */}
-                <div className="cormorant-garamond-light text-xl text-white mb-4 max-h-40 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-yellow-500 scrollbar-track-gray-800 whitespace-pre-line">
-                  {project.description}
-                </div>
-
-                {/* External Links */}
-               {project.links && (
-                  <div className="mb-4 flex flex-col gap-2">
-                    {project.links.video && (
-                      <a
-                        href={project.links.video}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-stroke-green underline hover:text-tigers-eye"
-                      >
-                        ▶️ Watch Demo Video
-                      </a>
-                    )}
-                    {project.links.pdfs && project.links.pdfs.length > 0 && (
-                    <div className="flex flex-col gap-1">
-                    {project.links.pdfs.map((pdf, i) => (
-                    <a
-                    key={i}
-                    href={pdf.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-stroke-green underline hover:text-tigers-eye"
-                    >
-                    📄 {pdf.label}
-                    </a>
+                <div className="p-6">
+                  <h3 className="font-display text-xl font-semibold text-white mb-2 group-hover:text-gold transition-colors">{p.name}</h3>
+                  <p className="font-sans text-sm text-muted leading-relaxed line-clamp-3">{p.summary}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {p.skills.slice(0, 3).map((s) => (
+                      <span key={s} className="font-sans text-xs px-3 py-1 rounded-full border border-line text-muted">{s}</span>
                     ))}
-      </div>
-    )}
                   </div>
-                )}
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </div>
 
-                {/* Skills */}
-                <div className="flex flex-wrap gap-2">
-                  {project.skills.map((skill, skillIndex) => (
-                    <span
-                      key={skillIndex}
-                      className="px-4 py-1 bg-tigers-eye text-cornsilk text-sm font-bold rounded-full"
-                    >
-                      {skill}
-                    </span>
+      {/* Detail modal */}
+      {project && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-8 bg-ink/80 backdrop-blur-sm"
+          onClick={() => setActive(null)}
+        >
+          <div
+            className="relative w-full max-w-2xl max-h-[88vh] overflow-hidden rounded-3xl border border-gold/30 bg-ink-800 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative h-44 sm:h-52">
+              <Image src={project.image} alt={project.name} fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-800 to-transparent" />
+              <button
+                onClick={() => setActive(null)}
+                className="absolute top-4 right-4 grid place-items-center w-9 h-9 rounded-full bg-ink/70 backdrop-blur text-white hover:text-gold border border-line transition-colors"
+                aria-label="Close"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="p-7 sm:p-9 overflow-y-auto scroll-area max-h-[calc(88vh-11rem)]">
+              <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-6">{project.name}</h3>
+
+              <div className="space-y-6">
+                {project.sections.map(({ heading, text }) => (
+                  <div key={heading}>
+                    <p className="font-sans text-xs tracking-widest uppercase text-gold mb-2">{heading}</p>
+                    <p className="font-sans text-base text-muted leading-relaxed">{text}</p>
+                  </div>
+                ))}
+              </div>
+
+              {project.links && (
+                <div className="mt-7 flex flex-col gap-2.5">
+                  {project.links.video && (
+                    <a href={project.links.video} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-sans text-sm text-gold hover:text-gold-soft transition-colors">
+                      <span>▶</span> Watch Demo
+                    </a>
+                  )}
+                  {project.links.pdfs?.map((pdf) => (
+                    <a key={pdf.label} href={pdf.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-sans text-sm text-gold hover:text-gold-soft transition-colors">
+                      <span>↗</span> {pdf.label}
+                    </a>
                   ))}
                 </div>
-              </div>
-            )}
+              )}
 
-            {/* Toggle Button */}
-            <span
-              className={`absolute top-4 right-4 text-earth-yellow cursor-pointer ${
-                activeIndex === index ? "rotate-45" : "rotate-0"
-              } transform transition-transform`}
-            >
-              +
-            </span>
+              <div className="mt-7 flex flex-wrap gap-2">
+                {project.skills.map((s) => (
+                  <span key={s} className="font-sans text-xs px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-gold-soft">{s}</span>
+                ))}
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </section>
   );
-};
-
-export default Projects;
+}

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx next *)",
+      "Bash(Start-Sleep -Seconds 5)",
+      "Bash(Invoke-WebRequest -Uri \"http://localhost:3002\" -UseBasicParsing -TimeoutSec 5)",
+      "Bash(Select-Object -First 3)",
+      "mcp__Claude_Preview__preview_start",
+      "PowerShell(netstat -ano)",
+      "Bash(gh auth *)",
+      "Bash(git config *)",
+      "Bash(git init *)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Modern dark redesign of portfolio *)",
+      "Bash(git commit -m 'Update local Claude permission allowlist *)"
+    ]
+  }
+}
