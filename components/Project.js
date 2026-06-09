@@ -16,7 +16,7 @@ const projects = [
     ],
     links: {
       pdfs: [
-        { url: "https://drive.google.com/drive/folders/1KrjyqP1jp65G1bFERbzyii1x2BcanxiL", label: "vILT Instructor Deck" },
+        { url: "https://drive.google.com/file/d/1Mgt6AQMfnDGASbOrfNO5Zot8pZ3uDcfq/view?usp=drive_link", label: "vILT Instructor Deck" },
         { url: "https://drive.google.com/file/d/1lrjjJJuBXzlIXdRnlDbOkWnn9022tFzg/view?usp=sharing", label: "Participant Workbook" },
         { url: "https://drive.google.com/file/d/1GRUyGg_3s6ZtS70xMVXPCGr-f5xqeoja/view?usp=sharing", label: "Dealing With Reactions Infographic" },
         { url: "https://drive.google.com/file/d/1fqePdkXkkKxLlpzHtaXjwMvH16rIhd-c/view?usp=sharing", label: "Decoding Others Infographic" },

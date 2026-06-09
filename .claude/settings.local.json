@@ -19,7 +19,9 @@
       "Bash(git fetch *)",
       "Bash(git reset *)",
       "Bash(git push *)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(git commit -m 'Update project demo links to Articulate review URLs *)",
+      "Bash(git commit -m 'Update Coaching vILT Instructor Deck link *)"
     ]
   }
 }
