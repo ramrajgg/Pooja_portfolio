@@ -21,7 +21,8 @@
       "Bash(git push *)",
       "Bash(python -c ' *)",
       "Bash(git commit -m 'Update project demo links to Articulate review URLs *)",
-      "Bash(git commit -m 'Update Coaching vILT Instructor Deck link *)"
+      "Bash(git commit -m 'Update Coaching vILT Instructor Deck link *)",
+      "Bash(cd \"C:\\\\Users\\\\Ramraj\\\\Downloads\" && ls -t *.png *.jpg *.jpeg 2>/dev/null | head -10; echo \"---PROJECT IMAGES DIR---\"; ls -t \"C:\\\\Users\\\\Ramraj\\\\Downloads\\\\Pooja_portfolio-main\\\\Pooja_portfolio-main\\\\public\\\\images\" 2>/dev/null | head)"
     ]
   }
 }

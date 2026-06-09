@@ -73,6 +73,18 @@ const projects = [
       pdfs: [{ url: "https://360.articulate.com/review/content/345af4b1-51d3-45e8-a316-bcb9f0d12f7b/review", label: "Watch Demo" }],
     },
   },
+  {
+    name: "Post Training Commitments – Reflection Journal",
+    summary: "A self-guided reflection journal that bridges the gap between the classroom and the job — turning what learners gained into concrete personal commitments and a 'Stop Doing / Start Doing' action plan.",
+    image: "/images/PostTrainingCommitments.png",
+    skills: ["Reflection Design", "Behavior Change", "Action Planning", "Kirkpatrick L3", "Articulate 360"],
+    sections: [
+      { heading: "Overview", text: "A self-guided reflection journal designed to bridge the gap between the classroom and the job — the point where most training quietly fails. Rather than ending a program at the final slide, this tool prompts learners to convert what they've learned into concrete personal commitments: specific action plans, and a clear \"Stop Doing / Start Doing\" framework that turns insight into intention." },
+      { heading: "Approach", text: "The journal is built on a simple principle: behavior change happens after the session, not during it. I designed it as a structured reflection experience that guides learners through three moves — committing to specific actions, defining a practical action plan to make them stick, and naming the behaviors they'll stop and start to close their own performance gaps." },
+      { heading: "Outcome", text: "The journal extends learning beyond the event and creates accountability at the individual level — supporting the shift from knowledge (Kirkpatrick Level 2) to on-the-job behavior change (Level 3). It gives learners a personal record of their commitments and gives managers a natural anchor for follow-up coaching conversations, reinforcing application and making training impact more visible and durable." },
+    ],
+    links: { video: "https://360.articulate.com/review/content/5d036beb-d0ed-41a5-a432-0595b21e3ef2/review" },
+  },
 ];
 
 export default function Projects() {
