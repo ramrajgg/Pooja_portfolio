@@ -58,7 +58,7 @@ const projects = [
       { heading: "Approach", text: "Built a branching interactive module with layered slides, scenario-based decision points, voiceovers, character-based storytelling, and contextual feedback using Articulate Storyline." },
       { heading: "Outcome", text: "Improved recall and increased application of secure coding practices in daily work, resulting in improved code security awareness across the development team." },
     ],
-    links: { video: "https://app.cloud.scorm.com/sc/InvitationConfirmEmail?publicInvitationId=73a72854-fd15-4141-b7f2-760b4519b574" },
+    links: { video: "https://360.articulate.com/review/content/b9f5a7e2-abee-498f-a4f2-66ee52313150/review" },
   },
   {
     name: "Time Management – eLearning Module",
@@ -70,7 +70,7 @@ const projects = [
       { heading: "Outcome", text: "Enhanced learner engagement, improved recall, and greater application of time-management techniques in daily work — leading to increased productivity across teams." },
     ],
     links: {
-      pdfs: [{ url: "https://app.cloud.scorm.com/sc/user/Course?appId=5FV0LK4E4O&courseId=eLearning_ArtiulateSLdemo_PoojaGf1ea7e3d-db96-4253-9d6e-3d4b739f2cbe", label: "Launch Module" }],
+      pdfs: [{ url: "https://360.articulate.com/review/content/345af4b1-51d3-45e8-a316-bcb9f0d12f7b/review", label: "Watch Demo" }],
     },
   },
 ];
